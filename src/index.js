@@ -1,3 +1,9 @@
+import {model} from './model'
 import './styles/main.css'
 
-console.log('12323')
+const site = document.querySelector('#site')
+
+model.forEach(block => {
+    site.insertAdjacentHTML('beforeend', block.toHTML())
+})
+
